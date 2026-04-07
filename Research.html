@@ -1,42 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<!--Nav Block-->
-<header class="bg-white/100 backdrop-blur border-b-0	 border-slate-200 sticky top-0 z-30">
-  <div class="max-w-auto mx-auto px-300 sm:px-6 h-20
-              flex items-center justify-between">
+<body>
+  <div id="navbar"></div>
 
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="images/MainLogo.png"
-           class="h-20 w-auto object-contain"
-           alt="Lab logo">
-
-      <span class="font-semibold tracking-tight text-slate-900 sm:whitespace-nowrap">
-        Design of Actuators, Robotics & Transducers Lab
-      </span>
-    </a>
-	<a href="https://www.utsa.edu" target="_blank" rel="noopener noreferrer">
-      <img src="images/UTSA logo.svg"
-           class="h-10 w-auto object-contain"
-           alt="UTSA logo">
-	</a>
-  </div>
-	 <header class="bg-blue-900 text-white border-b-0">
- <header class="bg-slate-900 text-white sticky top-0 z-30">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-center">
-    <nav class="hidden md:flex gap-20 text-lg font-semibold">
-	  <a href="index.html" class="text-slate-300 hover:text-white">Home</a>
-      <a href="Research.html"class="text-slate-300 hover:text-white">Research</a>
-      <a href="Team.html"class="text-slate-300 hover:text-white">People</a>
-      <a href="Publications.html"class="text-slate-300 hover:text-white">Publications</a>
-      <a href="Contact.html"class="text-slate-300 hover:text-white">Contact</a>
-    </nav>
-  </div>
-</header>
-
-</header>
-</header>
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+	
 <section>
 <!--Active Projects-->
 <section class="my-10">
@@ -64,7 +37,7 @@
 </section>
 
 
-<!--interested Projects-->
+<!--interested Projects
 <section class="my-10">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex flex-col items-center text-center gap-4">
@@ -79,7 +52,7 @@
         </div>
 
         <div class="mt-8 grid gap-6 md:grid-cols-3">
-          <!-- Area 1 -->
+          <!-- Area 1 
           <article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
   <h3 class="text-base font-semibold text-slate-900">
     Metamaterials and Metasurfaces
@@ -97,7 +70,7 @@
   </ol>
 </article>
 
-          <!-- Area 2 -->
+          <!-- Area 2 
           <article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
             <h3 class="text-base font-semibold text-slate-900">
               Energy Storage Reliability and Capacity
@@ -109,7 +82,7 @@
 			</ol>
 </article>
 
-          <!-- Area 3 -->
+          <!-- Area 3 
           <article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
             <h3 class="text-base font-semibold text-slate-900">
               Human Performance
